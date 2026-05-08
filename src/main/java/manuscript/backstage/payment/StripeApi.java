@@ -1,5 +1,8 @@
 package manuscript.backstage.payment;
 
+/**
+ * API of Stripe payment.
+ */
 public class StripeApi {
     
     public void execute(Transaction transaction, double amount) {

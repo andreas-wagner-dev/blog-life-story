@@ -44,26 +44,24 @@ import manuscript.wedding.video.LazyVideo;
 public class AnalogMovie implements Movie {
 
 	public static void main(String[] args) {
-		Movie movie = new AnalogMovie();
-		movie.start();
-		movie.nextScene();
+		new AnalogMovie().play();
 	}
 
 	private final Queue<Scene> filmRoll = new LinkedList<>();
 
-	@Override
-	public void start() {
-
+	private void start() {
+		
 		// ============================================================
 		// BACKSTAGE & MAKEUP (Preparation of the infrastructure)
 		// ============================================================
-		DatabaseArchive archive = new DatabaseArchive("jdbc:cinema://localhost/drehbuch");
+		System.out.println("\n🎭 [BACKSTAGE & MAKEUP] Preparation...\n");
+		DatabaseArchive archive = new DatabaseArchive("jdbc:cinema://localhost/movie");
 		Phone phone = new Phone("0170.777.888");
 		StripeApi stripe = new StripeApi();
 		EmailBox mailBox = new EmailBox("0127.555.333");
 
 		System.out.println("🎥 Quiet, please! Camera rolling, sound rolling...");
-		System.out.println("🎬 Roll film: The screening begins!");
+		System.out.println("🎬 Roll film: The screening begins!\n");
 
 		// ============================================================
 		// CASTING & MAKEUP (Preparation of the Performers)
@@ -94,8 +92,8 @@ public class AnalogMovie implements Movie {
 		Scene ringtausch = new RingExchange(romeo, julia);
 		filmRoll.add(new WeddingCeremony(romeo, brideWithArchive, guests, band, ringtausch));
 		filmRoll.add(new PayTheBand(groomWithCard, band, 500.00));
-		// Video Recap (with Proxy-Pattern)
-		Video video = new LazyVideo("liebesgeschichte_hd.mp4");
+		// Video Re-cap (with Proxy-Pattern)
+		Video video = new LazyVideo("lifestory_hd.mp4");
 		VideoCanvas screen = new VideoCanvas();
 		filmRoll.add(new LoveStoryFlashback(video, screen));
 		// Visual Close-up
@@ -107,7 +105,7 @@ public class AnalogMovie implements Movie {
 		filmRoll.add(new SunsetDinner(romeo, julia));
 
 		// ACT 3: The Birth
-		Hospital hospital = new Hospital("St. Mary's Klinik");
+		Hospital hospital = new Hospital("St. Mary's Hospital");
 		filmRoll.add(new BirthScene(julia, leon, hospital));
 
 		// ACT 4: The Family Life
@@ -116,7 +114,10 @@ public class AnalogMovie implements Movie {
 	}
 
 	@Override
-	public void nextScene() {
+	public void play() {
+
+		start();
+
 		while (!filmRoll.isEmpty()) {
 			Scene currentScene = filmRoll.poll();
 			System.out.println("\n🎞️ Next scene playing...");
@@ -124,4 +125,6 @@ public class AnalogMovie implements Movie {
 		}
 		System.out.println("\n🎬 It's a wrap! Many thanks to everyone involved.");
 	}
+
+
 }

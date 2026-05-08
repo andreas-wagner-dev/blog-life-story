@@ -16,7 +16,7 @@ public class HotelCheckIn implements Scene {
     @Override
     public void execute() {
         System.out.println("\n🏨 === HOTEL CHECK-IN ===");
-        System.out.println("🗝️  " + groom.name() + " und " + bride.name() + " beziehen ihr Zimmer.");
-        System.out.println("🏨 === CHECK-IN ABGESCHLOSSEN ===\n");
+        System.out.println("🗝️ " + groom.name() + " and " + bride.name() + " move into their room.");
+        System.out.println("🏨 === CHECK-IN COMPLETED ===\n");
     }
 }

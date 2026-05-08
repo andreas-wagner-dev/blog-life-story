@@ -6,6 +6,9 @@ import java.util.List;
 
 import manuscript.Name;
 
+/**
+ * Group of Musicians.
+ */
 public class Band implements Iterable<Musician> {
 
 	private List<Musician> group;

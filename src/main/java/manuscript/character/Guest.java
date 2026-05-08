@@ -4,7 +4,9 @@ import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Name;
 
-// 
+/**
+ * Guest role.
+ */
 public class Guest implements Actor {
 
 	private final Name name;

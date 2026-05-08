@@ -5,6 +5,9 @@ import manuscript.character.Groom;
 import manuscript.character.Bride;
 import manuscript.character.Newborn;
 
+/**
+ * Morning routine scene.
+ */
 public class MorningRoutine implements Scene {
     
     private final Groom father;
@@ -19,10 +22,10 @@ public class MorningRoutine implements Scene {
     
     @Override
     public void execute() {
-        System.out.println("\n☀️ === MORGENROUTINE DER FAMILIE ===");
-        System.out.println("⏰ " + father.name() + " bereitet das Frühstück vor.");
-        System.out.println("🍼 " + mother.name() + " füttert " + child.name() + ".");
+        System.out.println("\n☀️ === FAMILY MORNING ROUTINE ===");
+        System.out.println("⏰ " + father.name() + " prepares breakfast..");
+        System.out.println("🍼 " + mother.name() + " feeds " + child.name() + ".");
         child.perform();
-        System.out.println("☀️ === MORGENROUTINE ABGESCHLOSSEN ===\n");
+        System.out.println("☀️ === MORNING ROUTINE COMPLETED ===\n");
     }
 }

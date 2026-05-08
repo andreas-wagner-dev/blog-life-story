@@ -15,8 +15,8 @@ public class LoveStoryFlashback implements Scene {
     
     @Override
     public void execute() {
-        System.out.println("\n📽️  === LIEBESGESCHICHTE - RÜCKBLICK ===");
+        System.out.println("\n📽️ === LOVE STORY - A LOOK BACK ===");
         video.play(screen);
-        System.out.println("📽️  === ENDE DES RÜCKBLICKS ===\n");
+        System.out.println("📽️ === END OF LOOK BACK ===\n");
     }
 }

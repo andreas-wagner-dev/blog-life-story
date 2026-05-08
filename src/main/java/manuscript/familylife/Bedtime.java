@@ -4,6 +4,9 @@ import manuscript.Scene;
 import manuscript.character.Groom;
 import manuscript.character.Newborn;
 
+/**
+ * Bedtime scene.
+ */
 public class Bedtime implements Scene {
     
     private final Groom father;
@@ -16,10 +19,10 @@ public class Bedtime implements Scene {
     
     @Override
     public void execute() {
-        System.out.println("\n🌙 === GUTE-NACHT-GESCHICHTE ===");
-        System.out.println("📖 " + father.name() + " liest " + child.name() + " eine Geschichte vor.");
+        System.out.println("\n🌙 === BEDTIME STORY ===");
+        System.out.println("📖 " + father.name() + " reads " + child.name() + " a story aloud.");
         child.perform();
-        System.out.println("😴 " + child.name() + " schläft friedlich ein.");
-        System.out.println("🌙 === GUTE NACHT ===\n");
+        System.out.println("😴 " + child.name() + " falls asleep peacefully.");
+        System.out.println("🌙 === GOOD NIGHT ===\n");
     }
 }

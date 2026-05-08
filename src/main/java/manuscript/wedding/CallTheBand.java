@@ -15,8 +15,8 @@ public class CallTheBand implements Scene {
     
     @Override
     public void execute() {
-        System.out.println("\n☎️ === DIE BAND WIRD ANGERUFEN ===");
+        System.out.println("\n☎️ === THE BAND GETS A CALL ===");
         groomWithPhone.call(phoneNumber); 
-        System.out.println("☎️ === ANRUF ABGESCHLOSSEN ===\n");
+        System.out.println("☎️ === CALL COMPLETED ===\n");
     }
 }

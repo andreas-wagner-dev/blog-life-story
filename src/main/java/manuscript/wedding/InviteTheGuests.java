@@ -16,9 +16,9 @@ public class InviteTheGuests implements Scene {
 
 	@Override
 	public void execute() {
-        System.out.println("\n☎️ === Invitation of guests ===");
+        System.out.println("\n☎️ === INVINTATION OF GUESTS ===");
 		guests.forEach(guest -> brideWithLetters.invite(guest));
-        System.out.println("☎️ === End Invitation of guests ===\n");
+        System.out.println("☎️ === INVINTATION COMPLETED ===\n");
 	}
 
 }

@@ -14,6 +14,6 @@ public class CinematicGrid {
 	}
 
 	public void render() {
-		System.out.println("🎞️ [Cinematic Grid wird gerendert mit " + columns + " Spalten]");
+		System.out.println("🎞️ [Cinematic Grid is rendered with " + columns + " columns]");
 	}
 }

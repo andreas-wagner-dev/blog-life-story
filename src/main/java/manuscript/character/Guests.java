@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Group of Guest.
+ */
 public class Guests implements Iterable<Guest> {
 
 	private List<Guest> guests;

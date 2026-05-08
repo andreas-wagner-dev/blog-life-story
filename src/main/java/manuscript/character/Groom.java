@@ -3,7 +3,6 @@ package manuscript.character;
 import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Name;
-import manuscript.wedding.RingExchange.RingBasket;
 
 /**
  * Der Bräutigam ist einer der Hauptcharaktere in der Hochzeitsgeschichte.
@@ -24,35 +23,30 @@ public class Groom implements Actor {
 
 	@Override
 	public void perform() {
-		System.out.println("💍 " + name + " gibt sein Eheversprechen ab.");
+		System.out.println("💍 " + name + " exchanges his wedding vows.");
 	}
 
 	/**
-	 * Der Bräutigam überreicht den Ring.
-	 * 
+	 * The groom presents the ring.
 	 */
-	public void giveRing(RingBasket ringBasket) {
+	public void giveRing(Media ringBasket) {
 		ringBasket.with("bride", "Wedding-Ring");
-		System.out.println("💍 " + name + " überreicht den " + ringBasket + ".");
+		System.out.println("💍 " + name + " presents the " + ringBasket + ".");
 	}
 	
 	/**
-	 * Die Bräutigam empfängt den Ring.
+	 * The groom receives the ring.
 	 * 
-	 * @param ringOfBride
+	 * @param ringBasket basket
 	 */
-	public void receiveRing(RingBasket ringBasket) {
+	public void receiveRing(Media ringBasket) {
 		if (hasRing) {
-			throw new IllegalStateException("Die Bräutigam trägt bereits einen Ring!");
+			throw new IllegalStateException("The groom is already wearing a ring!");
 		}
-		System.out.println("💍 " + name + " nimmt den " + ringBasket + " entgegen.");
+		System.out.println("💍 " + name + " take the " + ringBasket + ".");
 		hasRing = true;
 	}
 	
-	/**
-	 * Der Akteur artikuliert seine Identität. Er "spricht" zum Medium und übergibt
-	 * seine fachlichen Details, ohne seine interne Struktur zu entblößen.
-	 */
 	public void speak(Media media) {
 		media.with("role", "Groom")
 		.with("name", name.value())

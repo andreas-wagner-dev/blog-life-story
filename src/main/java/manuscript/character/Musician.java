@@ -4,6 +4,9 @@ import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Name;
 
+/**
+ * Musician role.
+ */
 public class Musician implements Actor {
 	
 	private final Name name;
@@ -19,7 +22,7 @@ public class Musician implements Actor {
 
 	@Override
 	public void perform() {
-		System.out.println("🧍‍♂️" + name + " play music.");
+		System.out.println("🧍‍ " + name + " play music.");
 	}
 
 	@Override

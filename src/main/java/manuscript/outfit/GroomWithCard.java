@@ -23,7 +23,7 @@ public class GroomWithCard extends Outfit implements Payer {
 
 	@Override
 	public void pay(double amount, String toAccountId) {
-		System.out.println("💰 " + name() + " initialize payment of €" + amount);
+		System.out.println("💰 " + name() + " Initialize payment of €" + amount);
 		String groomAccountId = "stripe_account_" + name().value().toLowerCase();
 		stripeApi.execute(new Transaction(groomAccountId, toAccountId), amount);
 	}

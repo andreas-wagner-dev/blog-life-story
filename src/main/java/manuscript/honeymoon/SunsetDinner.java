@@ -15,8 +15,8 @@ public class SunsetDinner implements Scene {
     
     @Override
     public void execute() {
-        System.out.println("\n🌅 === ROMANTISCHES ABENDESSEN BEI SONNENUNTERGANG ===");
-        System.out.println("🍷 " + groom.name() + " und " + bride.name() + " genießen ein köstliches Dinner.");
-        System.out.println("🌅 === ABENDESSEN BEENDET ===\n");
+        System.out.println("\n🌅 === ROMANTIC DINNER ABENDESSEN AT SUNSET ===");
+        System.out.println("🍷 " + groom.name() + " and " + bride.name() + " enjoy a delicious dinner.");
+        System.out.println("🌅 === DINNER ENDED ===\n");
     }
 }

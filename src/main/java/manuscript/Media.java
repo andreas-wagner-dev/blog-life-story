@@ -3,6 +3,9 @@ package manuscript;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Any medium to represent as media.
+ */
 public interface Media {
 
 	Media with(String name, String value);

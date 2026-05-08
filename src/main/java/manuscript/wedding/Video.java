@@ -4,9 +4,9 @@ import manuscript.Media;
 
 public interface Video {
 	
-    /** Lädt das Video in den Arbeitsspeicher. */  
+    /** Loads the video into memory. */  
     void load();
     
-    /** Spielt das Video ab. */  
+    /** Play the video. */  
 	void play(Media screen);
 }

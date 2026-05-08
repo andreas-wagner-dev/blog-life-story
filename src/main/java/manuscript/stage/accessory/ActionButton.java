@@ -13,7 +13,7 @@ public class ActionButton {
     }
     
     public void click() {
-        System.out.println("🔘 Button geklickt: " + label);
+        System.out.println("🔘 Button clicked: " + label);
         action.execute();
     }
 }

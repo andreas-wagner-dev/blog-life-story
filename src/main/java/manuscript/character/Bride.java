@@ -3,8 +3,10 @@ package manuscript.character;
 import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Name;
-import manuscript.wedding.RingExchange.RingBasket;
 
+/**
+ * The actor playing the bride.
+ */
 public class Bride implements Actor {
 
 	private final Name name;
@@ -21,38 +23,34 @@ public class Bride implements Actor {
 
 	@Override
 	public void perform() {
-		System.out.println("💍 " + name + " gibt ihr Eheversprechen ab.");
+		System.out.println("💍 " + name + " recites her wedding vows..");
 	}
 
 	/**
-	 * Der Braut überreicht den Ring.
-	 * 
+	 * The bride presents the ring.
 	 */
-	public void giveRing(RingBasket ringBasket) {
+	public void giveRing(Media ringBasket) {
 		ringBasket.with("groom", "Wedding-Ring");
-		System.out.println("💍 " + name + " überreicht den " + ringBasket + ".");
+		System.out.println("💍 " + name + " hands over " + ringBasket + ".");
 	}
-	
+
 	/**
-	 * Die Braut empfängt den Ring.
+	 * The bride receives the ring.
 	 * 
-	 * @param ringOfBride
+	 * @param ringBasket basket
 	 */
-	public void receiveRing(RingBasket ringBasket) {
+	public void receiveRing(Media ringBasket) {
 		if (hasRing) {
-			throw new IllegalStateException("Die Braut trägt bereits einen Ring!");
+			throw new IllegalStateException("The bride is already wearing a ring!");
 		}
-		System.out.println("💍 " + name + " nimmt den " + ringBasket + " entgegen.");
+		System.out.println("💍 " + name + " take the " + ringBasket + ".");
 		hasRing = true;
 	}
 
 	/**
-	 * Die Braut "spricht" das "Ja-Wort".
+	 * The bride "says" her "I will."
 	 */
 	public void speak(Media media) {
-		media.with("role", "Bride")
-		.with("name", name.value())
-		.with("text", "Yes, I will...")
-		.with("hasRing", hasRing);
+		media.with("role", "Bride").with("name", name.value()).with("text", "Yes, I will...").with("hasRing", hasRing);
 	}
 }

@@ -25,7 +25,7 @@ public class LazyVideo implements Video {
 	@Override
 	public void play(Media screen) {
 		if (!initialized) {
-			System.out.println("🎬 Proxy bereitet Video vor...");
+			System.out.println("🎬 Proxy is preparing the video...");
 			load();
 		}
 		realVideo.play(screen);

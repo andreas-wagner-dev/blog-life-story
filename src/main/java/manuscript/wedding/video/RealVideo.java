@@ -15,7 +15,7 @@ public class RealVideo implements Video {
     @Override
     public void load() {
         if (!loaded) {
-            System.out.println("📼 Lade Video: " + filename + " (dies dauert einen Moment...)");
+            System.out.println("📼 Loading Video: " + filename + " (this will take a moment...)");
             // Simuliere schwere Lade-Operationen
             try {
                 Thread.sleep(1000);
@@ -31,7 +31,7 @@ public class RealVideo implements Video {
         if (!loaded) {
             load();
         }
-        System.out.println("▶️ Spiele Video ab: " + filename);
+        System.out.println("▶️  Play Video: " + filename);
 		screen.with("content", filename);
 		
 	}

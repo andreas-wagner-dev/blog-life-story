@@ -11,7 +11,7 @@ public class ActorInSuite extends Outfit {
     
     @Override
     public void perform() {
-        System.out.println("🤵 " + name() + " tritt im Hochzeitsanzug auf die Bühne.");
+        System.out.println("🤵 " + name() + " steps onto the stage in a wedding suit.");
         decoratedActor.perform();
     }
 

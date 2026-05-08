@@ -17,13 +17,13 @@ public class GroomWithPhone extends Outfit implements Headset {
 	}
 
 	public void call(String message) {
-		System.out.println("📞 Anrufen der Band 🎼...");
+		System.out.println("📞 Calling the Band 🎼...");
 		phone.publish(message);
 	}
 
 	@Override
 	public void accept(String message) {
-		System.out.println("📞 Bestätigung von der Band 🎹: " + message);
+		System.out.println("📞 Confirmation from the band 🎹: " + message);
 	}
 
 	@Override

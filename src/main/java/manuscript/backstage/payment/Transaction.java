@@ -2,7 +2,11 @@ package manuscript.backstage.payment;
 
 import manuscript.Media;
 
+/**
+ * Transaction of payment.
+ */
 public class Transaction extends Media.Default {
+	
 	private String fromAccount;
 	private String toAccount;
 

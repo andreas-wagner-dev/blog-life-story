@@ -18,10 +18,10 @@ public class PayTheBand implements Scene {
 
 	@Override
 	public void execute() {
-		System.out.println("\n🎵 === DIE BAND WIRD BEZAHLT ===");
+		System.out.println("\n🎵 === THE BAND GETS PAID ===");
 		String bandAccountId = "stripe_account_" + band.name().value().toLowerCase();
 		payer.pay(amount, bandAccountId);
-		System.out.println("🎵 === ZAHLUNG ABGESCHLOSSEN ===\n");
+		System.out.println("🎵 === PAYMENT COMPLETED ===\n");
 	}
 
 }

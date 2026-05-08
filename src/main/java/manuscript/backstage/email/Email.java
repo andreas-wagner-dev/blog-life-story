@@ -1,5 +1,8 @@
 package manuscript.backstage.email;
 
+/**
+ * Record to transfer email data.
+ */
 public class Email {
 
 	private String from;
@@ -22,5 +25,10 @@ public class Email {
 
 	public String content() {
 		return content;
+	}
+
+	@Override
+	public String toString() {
+		return "From: " + from + ", To: " + to + ", Text: " + content;
 	}
 }

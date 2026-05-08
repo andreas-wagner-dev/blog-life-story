@@ -25,13 +25,13 @@ public class BrideWithArchive extends Outfit {
 		//
 		decoratedActor.perform();
 		//
-	    // Simuliere Datenbank-Speicherung
-        // Das Archiv reicht dem Akteur ein leeres Blatt (RecordMedia)
+	    // Simulate database storage
+        // The Archive hands the Actor a blank sheet (RecordMedia).
         RecordMedia record = new RecordMedia();
-        // Der Akteur "spricht" seine Daten auf das Blatt
+        // The actor "speaks" his data onto the sheet.
         speak(record);
 		arhive.store(record);
-		System.out.println("💾 " + name() + " wurde in der Datenbank gespeichert.");
+		System.out.println("💾 " + name() + " was saved in the database.");
 	}
 
 }

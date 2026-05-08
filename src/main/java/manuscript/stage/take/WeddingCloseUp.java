@@ -19,19 +19,19 @@ public class WeddingCloseUp implements Take {
 	@Override
 	public void render() {
 
-		System.out.println("\n🎥 === NAHAUFNAHME: DIE HOCHZEIT ===");
+		System.out.println("\n🎥 === CLOSE-UP: THE WEDDING ===");
 
-		System.out.println("📸 Kamera fokussiert auf " + groom.name() + " und " + bride.name());
+		System.out.println("📸 Camera focuses on " + groom.name() + " and " + bride.name());
 		groom.perform();
 		bride.perform();
-		System.out.println("🎞️ Aufnahmeband läuft...");
+		System.out.println("🎞️ Recording tape rolling...");
 		SpeechBubble groomSpeechBubble = new SpeechBubble();
 		groom.speak(groomSpeechBubble);
 		SpeechBubble brideSpeechBubble = new SpeechBubble();
 		bride.speak(brideSpeechBubble);
-		System.out.println("📺 Aufnahme erscheint auf der Leinwand...");
+		System.out.println("📺 The image appears on the screen...");
 		CinematicGrid grid = new CinematicGrid(groomSpeechBubble, brideSpeechBubble);
 		grid.render();
-		System.out.println("🎥 === ENDE DER NAHAUFNAHME ===\n");
+		System.out.println("🎥 === END OF CLOSE-UP ===\n");
 	}
 }

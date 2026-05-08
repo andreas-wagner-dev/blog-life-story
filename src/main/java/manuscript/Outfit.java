@@ -1,5 +1,8 @@
 package manuscript;
 
+/**
+ * Abstract outfit to decorate an actor.
+ */
 public abstract class Outfit implements Actor {
     
     protected final Actor decoratedActor;

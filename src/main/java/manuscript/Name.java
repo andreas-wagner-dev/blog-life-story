@@ -6,7 +6,7 @@ public class Name {
 
 	public Name(String value) {
 		if (value == null || value.trim().isEmpty()) {
-			throw new IllegalArgumentException("Name darf nicht leer sein!");
+			throw new IllegalArgumentException("Name cannot be empty!");
 		}
 		this.value = value;
 	}

@@ -26,20 +26,12 @@ public class RealVideo implements Video {
         }
     }
     
-    @Override
-    public void play() {
-        if (!loaded) {
-            load();
-        }
-        System.out.println("▶️  Spiele Video ab: " + filename);
-    }
-
 	@Override
 	public void play(Media screen) {
         if (!loaded) {
             load();
         }
-        System.out.println("▶️  Spiele Video ab: " + filename);
+        System.out.println("▶️ Spiele Video ab: " + filename);
 		screen.with("content", filename);
 		
 	}

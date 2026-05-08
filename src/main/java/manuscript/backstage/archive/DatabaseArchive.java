@@ -23,6 +23,6 @@ public class DatabaseArchive implements Archive {
         // Simuliere Datenbank-Speicherung
         
         // Das Archiv speichert das Ergebnis
-        System.out.println("⚙️ [BACKSTAGE] Archiviert: " + record.getContent());
+        System.out.println("⚙️ [BACKSTAGE] Archiviert: " + record.toString());
     }
 }

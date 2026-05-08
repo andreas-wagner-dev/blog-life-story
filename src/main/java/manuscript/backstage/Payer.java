@@ -1,6 +1,6 @@
 package manuscript.backstage;
 
 public interface Payer {
-    /** Führt eine Zahlung durch. */  
-    void pay(double amount);
+    /** Pay amount to Account. */  
+    void pay(double amount, String toAccountId);
 }

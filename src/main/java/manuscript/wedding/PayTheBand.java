@@ -2,21 +2,26 @@ package manuscript.wedding;
 
 import manuscript.Scene;
 import manuscript.backstage.Payer;
+import manuscript.character.Band;
 
 public class PayTheBand implements Scene {
-    
-    private final Payer payer;
-    private final double amount;
-    
-    public PayTheBand(Payer payer, double amount) {
-        this.payer = payer;
-        this.amount = amount;
-    }
-    
-    @Override
-    public void execute() {
-        System.out.println("\n🎵 === DIE BAND WIRD BEZAHLT ===");
-        payer.pay(amount);
-        System.out.println("🎵 === ZAHLUNG ABGESCHLOSSEN ===\n");
-    }
+
+	private final Payer payer;
+	private final Band band;
+	private final double amount;
+
+	public PayTheBand(Payer payer, Band band, double amount) {
+		this.payer = payer;
+		this.band = band;
+		this.amount = amount;
+	}
+
+	@Override
+	public void execute() {
+		System.out.println("\n🎵 === DIE BAND WIRD BEZAHLT ===");
+		String bandAccountId = "stripe_account_" + band.name().value().toLowerCase();
+		payer.pay(amount, bandAccountId);
+		System.out.println("🎵 === ZAHLUNG ABGESCHLOSSEN ===\n");
+	}
+
 }

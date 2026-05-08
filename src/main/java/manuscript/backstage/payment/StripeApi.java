@@ -2,10 +2,10 @@ package manuscript.backstage.payment;
 
 public class StripeApi {
     
-    public void executeTransaction(double amount, String accountId) {
-        System.out.println("💳 [Stripe API] Transaktion wird ausgeführt...");
-        System.out.println("💳 [Stripe API] Betrag: €" + amount);
-        System.out.println("💳 [Stripe API] Konto: " + accountId);
-        System.out.println("💳 [Stripe API] Transaktion erfolgreich!");
+    public void execute(Transaction transaction, double amount) {
+        System.out.println("💳 [Stripe API] Transaction will be executed...");
+        System.out.println("💳 [Stripe API] Amount: €" + amount);
+        System.out.println("💳 [Stripe API] Accounts: " + transaction.toString());
+        System.out.println("💳 [Stripe API] Transaction success!");
     }
 }

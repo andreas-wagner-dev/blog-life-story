@@ -21,7 +21,7 @@ public class LazyVideo implements Video {
 		initialized = true;
 		realVideo.load();
 	}
-	
+
 	@Override
 	public void play(Media screen) {
 		if (!initialized) {
@@ -30,15 +30,5 @@ public class LazyVideo implements Video {
 		}
 		realVideo.play(screen);
 	}
-	
-	@Override
-	public void play() {
-		if (!initialized) {
-			System.out.println("🎬 Proxy bereitet Video vor...");
-			load();
-		}
-		realVideo.play();
-	}
-
 
 }

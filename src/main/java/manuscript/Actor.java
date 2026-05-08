@@ -2,7 +2,7 @@ package manuscript;
 
 public interface Actor {
 	
-    /** Der Name als unveränderliches Requisit. */
+    /** Name  Requisite. */
     Name name();
     
     /** Der primäre Kommunikationskanal: Die Aufforderung zum Handeln. */

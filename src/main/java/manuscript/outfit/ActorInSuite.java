@@ -3,9 +3,9 @@ import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Outfit;
 
-public class SuitedActor extends Outfit {
+public class ActorInSuite extends Outfit {
     
-    public SuitedActor(Actor actor) {
+    public ActorInSuite(Actor actor) {
         super(actor);
     }
     

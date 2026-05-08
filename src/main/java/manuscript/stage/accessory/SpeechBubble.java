@@ -1,11 +1,8 @@
 package manuscript.stage.accessory;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 import manuscript.Media;
 
-public class SpeechBubble implements Media {
+public class SpeechBubble extends Media.Default {
 
 	private String text;
 
@@ -38,18 +35,4 @@ public class SpeechBubble implements Media {
 		return this;
 	}
 
-	@Override
-	public Media with(String name, BigDecimal value) {
-		return this;
-	}
-
-	@Override
-	public Media with(String name, LocalDate value) {
-		return this;
-	}
-
-	@Override
-	public Media with(String name, boolean value) {
-		return this;
-	}
 }

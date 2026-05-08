@@ -1,7 +1,6 @@
 package manuscript.character;
 
 import manuscript.Actor;
-import manuscript.Air;
 import manuscript.Media;
 import manuscript.Name;
 
@@ -27,17 +26,15 @@ public class Newborn implements Actor {
     }
     
     /**  
-     * Das Baby weint.  
+     * Baby cry.  
      */  
     public void cry() {
-        Air air = new Air(); // default Medium
+    	Media.Air air = new Media.Air();
         speak(air);
         System.out.println(air.toString());
     }
     
-     /**
-     * Das Baby weint.
-     */
+     /** Baby cry.*/
     public void speak(Media media) {
         String value = name.value();
 		media.with("role", "Newborn")

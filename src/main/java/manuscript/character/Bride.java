@@ -3,6 +3,7 @@ package manuscript.character;
 import manuscript.Actor;
 import manuscript.Media;
 import manuscript.Name;
+import manuscript.wedding.RingExchange.RingBasket;
 
 public class Bride implements Actor {
 
@@ -24,13 +25,24 @@ public class Bride implements Actor {
 	}
 
 	/**
-	 * Die Braut empfängt den Ring.
+	 * Der Braut überreicht den Ring.
+	 * 
 	 */
-	public void receiveRing() {
+	public void giveRing(RingBasket ringBasket) {
+		ringBasket.with("groom", "Wedding-Ring");
+		System.out.println("💍 " + name + " überreicht den " + ringBasket + ".");
+	}
+	
+	/**
+	 * Die Braut empfängt den Ring.
+	 * 
+	 * @param ringOfBride
+	 */
+	public void receiveRing(RingBasket ringBasket) {
 		if (hasRing) {
 			throw new IllegalStateException("Die Braut trägt bereits einen Ring!");
 		}
-		System.out.println("💍 " + name + " nimmt den Trauring entgegen.");
+		System.out.println("💍 " + name + " nimmt den " + ringBasket + " entgegen.");
 		hasRing = true;
 	}
 

@@ -8,8 +8,5 @@ public interface Video {
     void load();
     
     /** Spielt das Video ab. */  
-    void play();
-    
-    /** Spielt das Video ab. */  
 	void play(Media screen);
 }

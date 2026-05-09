@@ -23,7 +23,7 @@ public class Groom implements Actor {
 
 	@Override
 	public void perform() {
-		System.out.println("💍 " + name + " exchanges his wedding vows.");
+		System.out.println("💍 " + name + " recites her wedding vows..");
 	}
 
 	/**

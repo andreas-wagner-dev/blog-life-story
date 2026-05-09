@@ -96,10 +96,13 @@ public class AnalogMovie implements Movie {
 		Video video = new LazyVideo("lifestory_hd.mp4");
 		VideoCanvas screen = new VideoCanvas();
 		filmRoll.add(new LoveStoryFlashback(video, screen));
-		// Visual Close-up
-		WeddingCloseUp visualTake = new WeddingCloseUp(romeo, julia);
-		filmRoll.add(visualTake::render);
-
+	    // Visual Close-up & Interaction
+	    WeddingCloseUp visualTake = new WeddingCloseUp(romeo, julia);
+	    filmRoll.add(() -> {
+	        visualTake.render();
+	        visualTake.clickOnButton(); // Simulating the user's choice
+	    });
+		
 		// ACT 2: The Honeymoon
 		filmRoll.add(new HotelCheckIn(romeo, julia));
 		filmRoll.add(new SunsetDinner(romeo, julia));

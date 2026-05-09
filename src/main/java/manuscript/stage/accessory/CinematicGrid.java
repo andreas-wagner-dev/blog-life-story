@@ -1,19 +1,26 @@
 package manuscript.stage.accessory;
 
-import java.util.Arrays;
-import java.util.List;
-
 import manuscript.Media;
+import manuscript.Name;
+import manuscript.stage.Multimedia;
 
-public class CinematicGrid {
+public class CinematicGrid extends Multimedia {
 
-	private List<Media> columns;
-
-	public CinematicGrid(Media... columns) {
-		this.columns = Arrays.asList(columns);
+	public CinematicGrid() {
+		super(new Name("CinematicGrid"));
 	}
 
 	public void render() {
-		System.out.println("🎞️ [Cinematic Grid is rendered with " + columns + " columns]");
+		System.out.println("📺 Render " + name().value());
+		System.out.print(toString());
+	}
+
+	@Override
+	public String toString() {
+		String text = "";
+		for (Media media : elements) {
+			text = text + "📺 Render " + media.toString() + "\n";
+		}
+		return text;
 	}
 }

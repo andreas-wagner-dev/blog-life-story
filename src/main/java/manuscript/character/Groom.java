@@ -30,7 +30,7 @@ public class Groom implements Actor {
 	 * The groom presents the ring.
 	 */
 	public void giveRing(Media ringBasket) {
-		ringBasket.with("bride", "Wedding-Ring");
+		ringBasket.with("bride-ring", "Wedding-Ring");
 		System.out.println("💍 " + name + " presents the " + ringBasket + ".");
 	}
 	
@@ -40,10 +40,14 @@ public class Groom implements Actor {
 	 * @param ringBasket basket
 	 */
 	public void receiveRing(Media ringBasket) {
+		String ring = ringBasket.content("groom-ring");
+		if (ring.isEmpty()) {
+			throw new IllegalStateException("Wedding ring is missing!");
+		}
 		if (hasRing) {
 			throw new IllegalStateException("The groom is already wearing a ring!");
 		}
-		System.out.println("💍 " + name + " take the " + ringBasket + ".");
+		System.out.println("💍 " + name + " take the " + ring + ".");
 		hasRing = true;
 	}
 	

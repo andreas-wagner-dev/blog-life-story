@@ -13,7 +13,7 @@ public class GroomWithPhone extends Outfit implements Headset {
 	public GroomWithPhone(Actor actor, Phone phone) {
 		super(actor);
 		this.phone = phone;
-		this.phone.receive(this);
+		this.phone.subscribe(this);
 	}
 
 	public void call(String message) {

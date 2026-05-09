@@ -8,7 +8,7 @@ import java.util.function.Consumer;
  */
 public interface Channel<T> {
 
-	void receive(Consumer<T> reciever);
+	void subscribe(Consumer<T> subscriber);
 
 	void publish(T message);
 }

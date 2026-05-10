@@ -2,7 +2,7 @@
 
 > *"AI writes code in seconds today. But who will still understand it tomorrow?"*
 
-A living reference implementation of the **Feature-Film Philosophy** — an object-oriented architecture where code reads like a screenplay, not a technical manual.
+A living reference implementation of the **Feature-Film Philosophy** - an object-oriented architecture where code reads like a screenplay, not a technical manual.
 
 Based on the article: [Software Code That Reads Like a Movie](https://medium.com/@andreas.wagner.info/software-code-that-reads-like-a-movie-cdf0d88d097d)
 
@@ -10,9 +10,9 @@ Based on the article: [Software Code That Reads Like a Movie](https://medium.com
 
 ## The Core Idea
 
-Computers process arbitrary data structures. Humans understand the world through stories. Our brains store information through cause, effect, and **emotion** — not through passive data containers and stateless service layers.
+Computers process arbitrary data structures. Humans understand the world through stories. Our brains store information through cause, effect, and **emotion** - not through passive data containers and stateless service layers.
 
-The Feature-Film Philosophy stages an object-oriented system as a **living ensemble of intelligent actors**. These actors appear in scenes, act across structured acts, and give the system a dramaturgy that is humanly tangible. The story is not merely executed — it is made emotionally experienceable through the behavior of the characters themselves.
+The Feature-Film Philosophy stages an object-oriented system as a **living ensemble of intelligent actors**. These actors appear in scenes, act across structured acts, and give the system a dramaturgy that is humanly tangible. The story is not merely executed - it is made emotionally experienceable through the behavior of the characters themselves.
 
 This codebase tells the life story of Romeo and Julia: from their **wedding** through their **honeymoon**, the **birth** of their child Leon, to everyday **family life**.
 

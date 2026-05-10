@@ -2,7 +2,7 @@
 
 > *"AI writes code in seconds today. But who will still understand it tomorrow?"*
 
-A living reference implementation of the **Feature-Film Philosophy** - an object-oriented architecture where code reads like a screenplay, not a technical manual.
+A living reference implementation of the **Feature-Film Philosophy** - an object-oriented structure where code reads like a screenplay, not a technical manual.
 
 Based on the article: [Software Code That Reads Like a Movie](https://medium.com/@andreas.wagner.info/software-code-that-reads-like-a-movie-cdf0d88d097d)
 

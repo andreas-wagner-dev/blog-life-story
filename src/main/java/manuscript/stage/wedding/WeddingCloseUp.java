@@ -1,4 +1,4 @@
-package manuscript.stage.take;
+package manuscript.stage.wedding;
 
 import manuscript.character.Bride;
 import manuscript.character.Groom;
@@ -13,11 +13,7 @@ public class WeddingCloseUp implements Take {
 	private final Groom groom;
 	private final Bride bride;
 
-	private SpeechBubble groomSpeechBubble;
-	private SpeechBubble brideSpeechBubble;
-
 	private Button button;
-	private CinematicGrid grid;
 
 	public WeddingCloseUp(Groom groom, Bride bride) {
 		this.groom = groom;
@@ -31,10 +27,10 @@ public class WeddingCloseUp implements Take {
 		System.out.println("📸 Camera focuses on " + groom.name() + " and " + bride.name());
 		System.out.println("🎞️ Recording tape rolling...");
 
-		groomSpeechBubble = new SpeechBubble("Groom bubble");
-		brideSpeechBubble = new SpeechBubble("Bride bubble");
+		SpeechBubble groomSpeechBubble = new SpeechBubble("Groom bubble");
+		SpeechBubble brideSpeechBubble = new SpeechBubble("Bride bubble");
 
-		grid = new CinematicGrid();
+		CinematicGrid grid = new CinematicGrid();
 		grid.add(groomSpeechBubble);
 		grid.add(brideSpeechBubble);
 

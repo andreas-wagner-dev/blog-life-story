@@ -27,7 +27,7 @@ import manuscript.outfit.BrideWithArchive;
 import manuscript.outfit.BrideWithMailbox;
 import manuscript.outfit.GroomWithCard;
 import manuscript.outfit.GroomWithPhone;
-import manuscript.stage.take.WeddingCloseUp;
+import manuscript.stage.wedding.WeddingCloseUp;
 import manuscript.wedding.CallTheBand;
 import manuscript.wedding.InviteTheGuests;
 import manuscript.wedding.LoveStoryFlashback;

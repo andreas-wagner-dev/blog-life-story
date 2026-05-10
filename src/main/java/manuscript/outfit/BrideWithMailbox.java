@@ -22,7 +22,6 @@ public class BrideWithMailbox extends Outfit {
 	}
 	
 	public void invite(Actor actor) {
-		Email mail = new Email(name().value(), actor.name().value(), "Invitation to Wedding..."); 
-		emailBox.put(mail);
+		emailBox.put(new Email(name().value(), actor.name().value(), "Invitation to Wedding..."));
 	}
 }

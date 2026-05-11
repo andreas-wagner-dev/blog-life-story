@@ -2,9 +2,7 @@
 
 > *"AI writes code in seconds today. But who will still understand it tomorrow?"*
 
-A living reference implementation of the **Feature-Film Philosophy** - an object-oriented structure where code reads like a screenplay, not a technical manual.
-
-Based on the article: [Software Code That Reads Like a Movie](https://medium.com/@andreas.wagner.info/software-code-that-reads-like-a-movie-cdf0d88d097d)
+A living reference implementation of the **Feature-Film Philosophy** - an object-oriented structure where code reads like a screenplay, not a technical manual. **Based on the article:** [Software Code That Reads Like a Movie](https://medium.com/@andreas.wagner.info/software-code-that-reads-like-a-movie-cdf0d88d097d)
 
 ---
 
@@ -279,6 +277,11 @@ The console output narrates the entire life story from the wedding ceremony thro
 
 ---
 
+> *"So let us become storytellers and create code that not only works, but brings its own meaning precisely onto the screen."*  **Cut, and... action! 🎬**
+
+![](https://github.com/andreas-wagner-dev/blog-life-story/blob/main/src/main/resources/docs/try_to_guess_movies.png)
+
+---
 ## Further Reading
 
 - [Software Code That Reads Like a Movie](https://medium.com/@andreas.wagner.info/software-code-that-reads-like-a-movie-cdf0d88d097d) - the original article this project illustrates
@@ -286,9 +289,3 @@ The console output narrates the entire life story from the wedding ceremony thro
 - [Next Level Readability](https://www.informatik-aktuell.de/entwicklung/programmiersprachen/next-level-lesbarkeit.html) - Robert Bräutigam
 - [Happy Packaging](https://javadevguy.wordpress.com/2017/12/18/happy-packaging/) - Robert Bräutigam
 - [Tell Don't Ask](https://www.martinfowler.com/bliki/TellDontAsk.html) - Martin Fowler
-
----
-
-> *"So let us become storytellers and create code that not only works, but brings its own meaning precisely onto the screen."*
->
-> **Cut, and... action! 🎬**

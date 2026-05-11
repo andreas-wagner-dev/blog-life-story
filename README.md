@@ -170,7 +170,8 @@ Open `directing/AnalogMovie.java`. This is the director's script. You will see:
 Each act is its own package. Open any scene class and read it like a paragraph of a novel:
 
 ```java
-// WeddingCeremony.execute() - self-explanatory choreography
+// WeddingCeremony.execute()
+// self-explanatory choreography
 groom.perform();
 bride.perform();
 ringExchange.execute();

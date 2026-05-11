@@ -50,7 +50,7 @@ bride.receiveRing(ringBasket);
 ### 3. Law of Demeter
 
 Actors communicate only with their **immediate neighbors**. No reaching of internal state through chains of objects.  
-Chains of methods are correct: order.customer().address().city() as long each method return a new object, but not a delegation of internal fields.  
+Method chains are legitimate: `order.customer().address().city();` as long each method return a new object, but not a delegation of internal fields.  
 This eliminates transitive coupling and keeps the staging semantically stable.
 
 ### 4. Domain-Centric Package Structure

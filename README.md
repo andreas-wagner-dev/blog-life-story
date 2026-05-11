@@ -163,7 +163,7 @@ Open `directing/AnalogMovie.java`. This is the director's script. You will see:
 4. **Film roll** - scenes are assembled in narrative order
 5. **Playback** - `play()` runs each scene sequentially
 
-## The Characters
+### The Characters
 
 | Character | Class | Role |
 |---|---|---|

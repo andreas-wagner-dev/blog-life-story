@@ -209,8 +209,11 @@ Each role in the story becomes an interface. Ask: *What can this character **do*
 
 ```java
 public interface Actor {
+
     Name name();
+
     void perform();
+
     void speak(Media media);
 }
 ```

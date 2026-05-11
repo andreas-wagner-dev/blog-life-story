@@ -12,7 +12,7 @@ Computers process arbitrary data structures. Humans understand the world through
 
 The Feature-Film Philosophy stages an object-oriented system as a **living ensemble of intelligent actors**. These actors appear in scenes, act across structured acts, and give the system a dramaturgy that is humanly tangible. The story is not merely executed - it is made emotionally experienceable through the behavior of the characters themselves.
 
-This codebase tells the life story of Romeo and Julia: from their **wedding** through their **honeymoon**, the **birth** of their child Leon, to everyday **family life**.
+This codebase tells the life story of *Romeo* and *Julia*: from their **wedding** through their **honeymoon**, the **birth** of their child Leon, to everyday **family life**.
 
 ---
 
@@ -53,8 +53,8 @@ Method chains are legitimate: `order.customer().address().city();` as long each 
 
 ### 4. Domain-Centric Package Structure
 
-* Packages should not reflect technical layers (`Service`, `Repository`, `Controller`).
-* They reflect **domain concepts and events** (`wedding`, `honeymoon`, `birth`, `familylife`).
+* Packages should not reflect technical layers (`service/`, `repository/`, `controller/`).
+* They reflect **domain concepts and events** (`wedding/`, `honeymoon/`, `birth/`, `familylife/`).
 * A new developer - or even a domain expert - can read the table of contents of the project and immediately understand the story being told.
 
 **Three rules for the package hierarchy:**

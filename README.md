@@ -49,9 +49,9 @@ bride.receiveRing(ringBasket);
 
 ### 3. Law of Demeter
 
-Actors communicate only with their **immediate neighbors**. No reaching of internal state through chains of objects.  
-Method chains are legitimate: `order.customer().address().city();` as long each method return a new object, but not a delegation of internal fields.  
+Actors communicate only with their **immediate neighbors**: No reaching of internal state through chains of objects.    
 This eliminates transitive coupling and keeps the staging semantically stable.
+Method chains are legitimate: `order.customer().address().city();` as long each method return a new object, but not a delegation of internal fields. 
 
 ### 4. Domain-Centric Package Structure
 
@@ -86,7 +86,33 @@ manuscript/
 ├─ familylife/          ← ACT 4      - Domain process: steady state
 │
 ├─ backstage/           ← STAGE ENGINEERING - Databases, APIs, infrastructure
+│  ├─ archive/
+│  │  ├─ DatabaseArchive.java   ← Concrete Database Connection
+│  │  └─ RecordMedia.java       ← Data Carrier for Database Entries
+│  ├─ email/
+│  │  ├─ Email.java             ← Email Data Object
+│  │  └─ EmailBox.java          ← Email Dispatch Adapter
+│  ├─ payment/
+│  │  ├─ StripeApi.java         ← Adapter for the Stripe Payment API
+│  │  └─ Transaction.java       ← Transaction Object for Payments
+│  ├─ phone/
+│  │  ├─ Phone.java             ← Phone Communication Adapter
+│  │  └─ Headset.java           ← Interface for Message Recipients
+│  ├─ Archive.java              ← Interface to the Archive (Database)
+│  ├─ Channel.java              ← Communication Channel (Publish/Subscribe)
+│  ├─ PostBox.java              ← Interface for Message Dispatch
+│  └─ Payer.java                ← Interface for Payment Processing
+│
 ├─ stage/               ← THE STAGE  - User interfaces & presentation
+│  ├─ accessory/
+│  │  ├─ Action.java             ← Interactive - Action
+│  │  ├─ Button.java             ← Interactive - Button
+│  │  ├─ CinematicGrid.java      ← Cinematic Grid - Layout
+│  │  └─ SpeechBubble.java       ← Speech Bubble for Dialogues - TextInput
+│  ├─ wedding/
+│  │  └─ WeddingCloseUp.java     ← Close-up of the Wedding - Visual View 
+│  ├─ Multimedia.java            ← Composite: Component with Sub-Components
+│  └─ Take.java                  ← Interface for Visual Takes
 │
 ├─ Actor.java           ← ACTOR      - Central interface for all characters
 ├─ Name.java            ← PROPS      - Precise domain value (Value Object)

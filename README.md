@@ -36,24 +36,33 @@ An actor is never interrogated about its internal state so that external code ca
 
 ```java
 // ❌ Ask style - state leaks outward
-if (bride.hasRing()) { doSomething(); }
+if (groom.hasRing()) {
+    Ring ring = groom.getRind();
+    bride.setRind(ring);
+}
 
 // ✅ Tell style - behavior stays with the actor
+RingBasket ringBasket = new RingBasket();
+groom.giveRing(ringBasket);
 bride.receiveRing(ringBasket);
 ```
 
 ### 3. Law of Demeter
 
-Actors communicate only with their **immediate neighbors**. No reaching through chains of objects. This eliminates transitive coupling and keeps the staging semantically stable.
+Actors communicate only with their **immediate neighbors**. No reaching of internal state through chains of objects.  
+Chains of methods are correct: order.customer().address().city() as long each method return a new object, but not a delegation of internal fields.  
+This eliminates transitive coupling and keeps the staging semantically stable.
 
 ### 4. Domain-Centric Package Structure
 
-Packages do not reflect technical layers (`Service`, `Repository`, `Controller`). They reflect **domain concepts and events** (`wedding`, `honeymoon`, `birth`, `familylife`). A new developer - or even a domain expert - can read the table of contents of the project and immediately understand the story being told.
+* Packages should not reflect technical layers (`Service`, `Repository`, `Controller`).
+* They reflect **domain concepts and events** (`wedding`, `honeymoon`, `birth`, `familylife`).
+* A new developer - or even a domain expert - can read the table of contents of the project and immediately understand the story being told.
 
 **Three rules for the package hierarchy:**
-- Parent packages never depend on their subpackages
-- Subpackages refine existing concepts - they do not introduce new ones
-- All naming follows the Ubiquitous Language of the domain
+* Parent packages never depend on their subpackages
+* Subpackages refine existing concepts - they do not introduce new ones
+* All naming follows the Ubiquitous Language of the domain
 
 ### 5. Composition Root - One Director, One Control Center
 

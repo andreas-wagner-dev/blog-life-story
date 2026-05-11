@@ -163,6 +163,16 @@ Open `directing/AnalogMovie.java`. This is the director's script. You will see:
 4. **Film roll** - scenes are assembled in narrative order
 5. **Playback** - `play()` runs each scene sequentially
 
+## The Characters
+
+| Character | Class | Role |
+|---|---|---|
+| Romeo | `Groom` | Central protagonist - groom |
+| Julia | `Bride` | Central protagonist - bride |
+| Leon | `Newborn` | New character introduced in Act 3 |
+| Mary, John | `Guest` / `Guests` | Supporting ensemble |
+| Jenny, Ben | `Musician` / `Band`| Musical accompaniment |
+
 ### Follow the Acts
 
 Each act is its own package. Open any scene class and read it like a paragraph of a novel:
@@ -177,6 +187,8 @@ band.forEach(musician -> musician.perform());
 guests.forEach(guest -> guest.clap());
 ```
 
+
+---
 ### Read the Stack Trace as a Drama
 
 When something fails, the error message reads like a screenplay stage direction - not a cryptic framework dump:
@@ -262,18 +274,6 @@ mvn test
 ```
 
 The console output narrates the entire life story from the wedding ceremony through the bedtime story - each scene framed with emoji stage directions that make the flow immediately readable.
-
----
-
-## The Characters
-
-| Character | Class | Role |
-|---|---|---|
-| Romeo | `Groom` | Central protagonist - groom |
-| Julia | `Bride` | Central protagonist - bride |
-| Leon | `Newborn` | New character introduced in Act 3 |
-| Mary, John | `Guest` / `Guests` | Supporting ensemble |
-| Jenny, Ben | `Musician` / `Band` ("Happy Wedding") | Musical accompaniment |
 
 ---
 

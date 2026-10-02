@@ -46,10 +46,8 @@ public class AnalogMovie implements Movie {
 	public static void main(String[] args) {
 		new AnalogMovie().play();
 	}
-
-	private final Queue<Scene> filmRoll = new LinkedList<>();
-
-	private void start() {
+	
+	private void stageScenes(Queue<Scene> filmRoll) {
 		
 		// ============================================================
 		// BACKSTAGE & MAKEUP (Preparation of the infrastructure)
@@ -119,7 +117,9 @@ public class AnalogMovie implements Movie {
 	@Override
 	public void play() {
 
-		start();
+		final Queue<Scene> filmRoll = new LinkedList<>();
+		
+		stageScenes(filmRoll);
 
 		while (!filmRoll.isEmpty()) {
 			Scene currentScene = filmRoll.poll();
